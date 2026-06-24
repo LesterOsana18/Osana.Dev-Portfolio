@@ -37,7 +37,7 @@ export default function Navbar() {
           href="#home"
           className="text-lg font-bold tracking-tight text-white hover:text-emerald-400 transition"
         >
-          LO
+          Osana<span className="text-emerald-400">.Dev</span>
         </a>
 
         {/* Nav Links + Resume */}
