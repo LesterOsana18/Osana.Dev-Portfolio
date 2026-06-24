@@ -73,19 +73,19 @@ export default function Hero() {
 
             {/* Social Links */}
             <div className="flex gap-5">
-              <a href="#" aria-label="GitHub">
+              <a href="https://github.com/LesterOsana18" aria-label="GitHub">
                 <SiGithub
                   className="hover:text-emerald-400 transition"
                   size={24}
                 />
               </a>
-              <a href="#" aria-label="LinkedIn">
+              <a href="https://linkedin.com/in/lstrosana" aria-label="LinkedIn">
                 <FaLinkedin
                   size={24}
                   className="hover:text-emerald-400 transition"
                 />
               </a>
-              <a href="#" aria-label="Email">
+              <a href="mailto:lstrosana.18@gmail.com" aria-label="Email">
                 <Mail className="hover:text-emerald-400 transition" />
               </a>
             </div>
