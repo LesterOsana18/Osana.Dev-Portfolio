@@ -69,7 +69,7 @@ export default function Contact() {
             Contact
           </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Let's work together
+            Let's Work Together
           </h2>
           <p className="text-slate-400 text-lg max-w-xl leading-relaxed">
             I'm currently open to internships, freelance work, and full-time

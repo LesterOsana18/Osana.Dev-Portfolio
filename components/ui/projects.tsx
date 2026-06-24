@@ -58,7 +58,7 @@ export default function Projects() {
             Projects
           </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Things I've built
+            Things I've Built
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl leading-relaxed">
             A selection of projects I've worked on — from academic research to
