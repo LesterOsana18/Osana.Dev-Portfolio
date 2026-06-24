@@ -32,6 +32,7 @@ export default function Hero() {
                 src="/images/profile.png"
                 alt="Lester Osana"
                 fill
+                sizes="(max-width: 768px) 208px, 256px"
                 className="rounded-full object-cover border-2 border-emerald-500/40"
                 priority
               />
