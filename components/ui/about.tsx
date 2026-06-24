@@ -112,7 +112,11 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="rounded-2xl border border-slate-800 bg-slate-900 p-6 hover:border-emerald-500/40 transition-colors duration-300"
+              whileHover={{
+                scale: 1.03,
+                transition: { type: "spring", stiffness: 260, damping: 18 },
+              }}
+              className="rounded-2xl border border-slate-800 bg-slate-900 p-6"
             >
               <div className="w-8 h-0.5 bg-emerald-500 rounded-full mb-5" />
               <h3 className="text-white font-semibold mb-2">{item.title}</h3>
