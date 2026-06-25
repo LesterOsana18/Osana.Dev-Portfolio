@@ -1,8 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import { motion } from "motion/react";
-import { Download, Code2 } from "lucide-react";
+import { Download, Code2, Sun, Moon } from "lucide-react";
+import { useTheme } from "next-themes";
+
+const useIsomorphicLayoutEffect =
+  typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -13,6 +17,12 @@ const navLinks = [
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  useIsomorphicLayoutEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -66,6 +76,19 @@ export default function Navbar() {
             <Download size={14} />
             Resume
           </a>
+
+          {/* Theme toggle */}
+          <button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="ml-2 flex items-center justify-center w-9 h-9 rounded-lg border border-slate-600 text-slate-400 hover:text-white hover:border-slate-400 transition"
+            aria-label="Toggle theme"
+          >
+            {mounted ? (
+              theme === "dark" ? <Sun size={16} /> : <Moon size={16} />
+            ) : (
+              <span className="w-4 h-4" />
+            )}
+          </button>
         </div>
       </nav>
     </motion.header>
