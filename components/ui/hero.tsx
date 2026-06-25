@@ -100,7 +100,7 @@ export default function Hero() {
               }}
               className="text-2xl md:text-4xl font-semibold text-slate-300 mb-6"
             >
-              Full-Stack Developer & Computer Science Student
+              Full-Stack Developer
             </motion.h2>
 
             <motion.p
@@ -110,9 +110,8 @@ export default function Hero() {
               }}
               className="max-w-2xl text-lg text-slate-400 leading-relaxed mb-10"
             >
-              I build modern web applications, explore optimization algorithms,
-              and lead development teams to create solutions that are scalable,
-              accessible, and user-focused.
+              I build scalable web applications and enjoy driving projects from 
+              concept to deployment through collaboration and technical problem-solving.
             </motion.p>
 
             {/* CTA Buttons */}

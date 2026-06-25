@@ -160,7 +160,7 @@ export default function Contact() {
                 <textarea
                   name="message"
                   required
-                  rows={5}
+                  rows={3}
                   placeholder="Hi Lester, I'd love to chat about..."
                   className="rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-emerald-500 transition resize-none"
                 />

@@ -86,25 +86,24 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-14"
+          className="mb-8"
         >
           <p className="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-3">
             About Me
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-5">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
             More Than Just Writing Code
           </h2>
           <p className="max-w-2xl text-slate-400 leading-relaxed text-lg">
-            I am a Computer Science student and Full-Stack Developer with
-            interests in software engineering, research, and technical
-            leadership. I enjoy building scalable solutions, exploring
-            optimization techniques, and helping communities grow through
-            technology and education.
+            I am a Full-Stack Developer who enjoys building scalable web applications 
+            and transforming ideas into practical digital solutions. With experience 
+            in both development and project collaboration, I strive to create software 
+            that is efficient, maintainable, and impactful.
           </p>
         </motion.div>
 
         {/* Focus Area Cards */}
-        <div className="grid gap-4 md:grid-cols-3 mb-14">
+        <div className="grid gap-4 md:grid-cols-3 mb-8">
           {highlights.map((item, index) => (
             <motion.div
               key={item.title}
@@ -118,7 +117,7 @@ export default function About() {
               }}
               className="rounded-2xl border border-slate-800 bg-slate-900 p-6"
             >
-              <div className="w-8 h-0.5 bg-emerald-500 rounded-full mb-5" />
+              <div className="w-8 h-0.5 bg-emerald-500 rounded-full mb-4" />
               <h3 className="text-white font-semibold mb-2">{item.title}</h3>
               <p className="text-slate-400 text-sm leading-relaxed">
                 {item.description}
@@ -153,7 +152,7 @@ export default function About() {
         </motion.div>
 
         {/* Tech Stack */}
-        <div className="mt-14">
+        <div className="mt-8">
           <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">
             Tech Stack
           </p>
