@@ -63,7 +63,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-12"
+          className="mb-8"
         >
           <p className="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-3">
             Contact
@@ -160,7 +160,7 @@ export default function Contact() {
                 <textarea
                   name="message"
                   required
-                  rows={3}
+                  rows={4}
                   placeholder="Hi Lester, I'd love to chat about..."
                   className="rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-emerald-500 transition resize-none"
                 />

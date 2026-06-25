@@ -40,7 +40,7 @@ export default function Experience() {
             Experience
           </p>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Where I've Worked & What I've Built
+            My Experience & Background
           </h2>
         </motion.div>
 

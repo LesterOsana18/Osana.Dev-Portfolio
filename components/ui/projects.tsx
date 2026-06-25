@@ -52,13 +52,13 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-12"
+          className="mb-8"
         >
           <p className="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-3">
             Projects
           </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Things I've Built
+            Featured Projects
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl leading-relaxed">
             A selection of projects I've worked on — from academic research to
