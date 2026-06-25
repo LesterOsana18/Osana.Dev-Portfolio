@@ -6,35 +6,35 @@ import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "Project Title",
+    title: "Extended Firefly Algorithm (EFA)",
     description:
-      "A short description of what this project does, the problem it solves, and who it's for. Keep it to 2–3 sentences.",
-    tags: ["Tag 1", "Tag 2", "Tag 3"],
-    github: "#",
-    live: "#",
-  },
-  {
-    title: "Project Title",
-    description:
-      "A short description of what this project does, the problem it solves, and who it's for. Keep it to 2–3 sentences.",
-    tags: ["Tag 1", "Tag 2", "Tag 3"],
-    github: "#",
-    live: "#",
-  },
-  {
-    title: "Project Title",
-    description:
-      "A short description of what this project does, the problem it solves, and who it's for. Keep it to 2–3 sentences.",
-    tags: ["Tag 1", "Tag 2", "Tag 3"],
-    github: "#",
+      "A research-based optimization system that extends the Firefly Algorithm to improve emergency personnel allocation during flood scenarios. The model helps identify efficient deployment strategies to support faster and more effective disaster response.",
+    tags: ["Java-based Simulator", "Optimization Algorithm", "Research"],
+    github: "https://github.com/CS-4-3-Group-4",
     live: null, // set to null if no live demo
   },
   {
-    title: "Project Title",
+    title: "Isko360",
     description:
-      "A short description of what this project does, the problem it solves, and who it's for. Keep it to 2–3 sentences.",
-    tags: ["Tag 1", "Tag 2", "Tag 3"],
-    github: "#",
+      "A centralized platform for managing and monitoring DOST-SEI scholars at PUP Main Campus. It streamlines scholar records, communication, and administrative processes through a unified database-driven system.",
+    tags: ["TypeScript", "PHP", "Laravel"],
+    github: "https://github.com/LesterOsana18/Isko360",
+    live: null, // set to null if no live demo
+  },
+  {
+    title: "PUP Commeownity",
+    description:
+      "A platform dedicated to promoting the welfare of cats within the PUP community. It serves as a hub for information, advocacy, and engagement among students and animal welfare supporters.",
+    tags: ["Blade", "Laravel", "Tailwind CSS"],
+    github: "https://github.com/WebDev-Group-4-25/PUPCommeownity",
+    live: null, // set to null if no live demo
+  },
+  {
+    title: "RentEase Application",
+    description:
+      "A rental management application that helps landlords track properties, manage tenants, automate rent calculations, and generate digital records. It simplifies day-to-day property management through a centralized system.",
+    tags: ["Java", "JavaFX", "MySQL"],
+    github: "https://github.com/LesterOsana18/RentEase-Application",
     live: null,
   },
 ];
