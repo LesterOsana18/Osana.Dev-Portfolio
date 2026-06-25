@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { Download } from "lucide-react";
+import { Download, Code2 } from "lucide-react";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -35,9 +35,14 @@ export default function Navbar() {
         {/* Logo / Name */}
         <a
           href="#home"
-          className="text-lg font-bold tracking-tight text-white hover:text-emerald-400 transition"
+          className="group inline-flex items-center overflow-hidden rounded-lg bg-emerald-500 text-white shadow-sm transition-all duration-500 ease-out hover:bg-emerald-400 hover:shadow-md"
         >
-          Osana<span className="text-emerald-400">.Dev</span>
+          <span className="flex h-9 w-9 items-center justify-center text-sm font-semibold transition-transform duration-300 group-hover:scale-105">
+            <Code2 size={18} />
+          </span>
+          <span className="max-w-0 overflow-hidden whitespace-nowrap px-0 text-sm font-semibold opacity-0 transition-all duration-500 ease-out group-hover:max-w-[140px] group-hover:px-2 group-hover:opacity-100">
+            Lester Osana
+          </span>
         </a>
 
         {/* Nav Links + Resume */}
