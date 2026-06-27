@@ -15,40 +15,33 @@ export default function Hero() {
       <section
         id="home"
         suppressHydrationWarning
-        className="min-h-screen flex items-center justify-center px-6 overflow-hidden relative"
+        className="min-h-screen flex items-center justify-center px-6 relative"
       >
-        {/* Background accents */}
-        <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-emerald-500/10 blur-3xl animate-pulse" />
-        <div className="pointer-events-none absolute bottom-0 right-0 h-80 w-80 rounded-full bg-cyan-500/5 blur-3xl animate-pulse" />
+        {/* Background accents — overflow isolated here */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-emerald-500/10 blur-3xl animate-pulse" />
+          <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-cyan-500/5 blur-3xl animate-pulse" />
+        </div>
 
-        <div className="max-w-5xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16 relative z-10">
-          {/* LEFT — Photo */}
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16 relative pt-24 pb-12 md:pt-0 md:pb-0">
+
+          {/* Photo */}
           <motion.div
             initial={{ opacity: 0, x: -24, scale: 0.96 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 0.7 }}
-            className="shrink-0"
+            className="shrink-0 mx-auto md:mx-0"
           >
             <motion.div
               animate={{ y: [0, -8, 0] }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               className="relative w-52 h-52 md:w-64 md:h-64"
             >
-              {/* Glow ring */}
               <motion.div
                 animate={{ opacity: [0.45, 0.75, 0.45], scale: [1.08, 1.14, 1.08] }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute inset-0 rounded-full bg-emerald-500/20 blur-xl"
               />
-
               <Image
                 src="/images/profile.png"
                 alt="Lester Osana"
@@ -60,67 +53,49 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* RIGHT — Text content */}
+          {/* Text content */}
           <motion.div
             initial="hidden"
             animate="visible"
+            className="text-center md:text-left"
             variants={{
               hidden: {},
-              visible: {
-                transition: {
-                  staggerChildren: 0.12,
-                },
-              },
+              visible: { transition: { staggerChildren: 0.12 } },
             }}
           >
             <motion.p
-              variants={{
-                hidden: { opacity: 0, y: 16 },
-                visible: { opacity: 1, y: 0 },
-              }}
+              variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
               className="text-emerald-400 font-medium mb-4"
             >
               Hi, I am
             </motion.p>
 
             <motion.h1
-              variants={{
-                hidden: { opacity: 0, y: 16 },
-                visible: { opacity: 1, y: 0 },
-              }}
+              variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
               className="text-5xl md:text-7xl font-bold tracking-tight mb-4"
             >
               Lester Osana
             </motion.h1>
 
             <motion.h2
-              variants={{
-                hidden: { opacity: 0, y: 16 },
-                visible: { opacity: 1, y: 0 },
-              }}
+              variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
               className="text-2xl md:text-4xl font-semibold text-slate-300 mb-6"
             >
               Full-Stack Developer
             </motion.h2>
 
             <motion.p
-              variants={{
-                hidden: { opacity: 0, y: 16 },
-                visible: { opacity: 1, y: 0 },
-              }}
+              variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
               className="max-w-2xl text-lg text-slate-400 leading-relaxed mb-10"
             >
-              I build scalable web applications and enjoy driving projects from 
+              I build scalable web applications and enjoy driving projects from
               concept to deployment through collaboration and technical problem-solving.
             </motion.p>
 
-            {/* CTA Buttons */}
+            {/* CTA */}
             <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 16 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              className="flex flex-wrap gap-4 mb-12"
+              variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
+              className="flex flex-wrap justify-center md:justify-start gap-4 mb-12"
             >
               <motion.a
                 href="#projects"
@@ -136,11 +111,8 @@ export default function Hero() {
 
             {/* Social Links */}
             <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 16 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              className="flex gap-5"
+              variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
+              className="flex justify-center md:justify-start gap-5"
             >
               <motion.a
                 href="https://github.com/LesterOsana18"
@@ -177,6 +149,7 @@ export default function Hero() {
               </motion.a>
             </motion.div>
           </motion.div>
+
         </div>
       </section>
     </>
