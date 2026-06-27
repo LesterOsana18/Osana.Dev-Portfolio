@@ -34,41 +34,18 @@ const facts = [
 const techStack = [
   { src: "https://skillicons.dev/icons?i=html", alt: "HTML", label: "HTML5" },
   { src: "https://skillicons.dev/icons?i=css", alt: "CSS", label: "CSS3" },
-  {
-    src: "https://skillicons.dev/icons?i=bootstrap",
-    alt: "Bootstrap",
-    label: "Bootstrap",
-  },
-  {
-    src: "https://skillicons.dev/icons?i=tailwind",
-    alt: "Tailwind CSS",
-    label: "Tailwind CSS",
-  },
-  {
-    src: "https://skillicons.dev/icons?i=js",
-    alt: "JavaScript",
-    label: "JavaScript",
-  },
-  {
-    src: "https://skillicons.dev/icons?i=ts",
-    alt: "TypeScript",
-    label: "TypeScript",
-  },
-  {
-    src: "https://skillicons.dev/icons?i=nodejs",
-    alt: "Node.js",
-    label: "Node.js",
-  },
+  { src: "https://skillicons.dev/icons?i=bootstrap", alt: "Bootstrap", label: "Bootstrap" },
+  { src: "https://skillicons.dev/icons?i=tailwind", alt: "Tailwind CSS", label: "Tailwind CSS" },
+  { src: "https://skillicons.dev/icons?i=js", alt: "JavaScript", label: "JavaScript" },
+  { src: "https://skillicons.dev/icons?i=ts", alt: "TypeScript", label: "TypeScript" },
+  { src: "https://skillicons.dev/icons?i=nextjs", alt: "Next.js", label: "Next.js" },
+  { src: "https://skillicons.dev/icons?i=nodejs", alt: "Node.js", label: "Node.js" },
   { src: "https://skillicons.dev/icons?i=react", alt: "React", label: "React" },
   { src: "https://skillicons.dev/icons?i=java", alt: "Java", label: "Java" },
   { src: "https://skillicons.dev/icons?i=python", alt: "Python", label: "Python" },
   { src: "https://skillicons.dev/icons?i=flask", alt: "Flask", label: "Flask" },
   { src: "https://skillicons.dev/icons?i=php", alt: "PHP", label: "PHP" },
-  {
-    src: "https://skillicons.dev/icons?i=laravel",
-    alt: "Laravel",
-    label: "Laravel",
-  },
+  { src: "https://skillicons.dev/icons?i=laravel", alt: "Laravel", label: "Laravel" },
   { src: "https://skillicons.dev/icons?i=mysql", alt: "MySQL", label: "MySQL" },
   { src: "https://skillicons.dev/icons?i=git", alt: "Git", label: "Git" },
   { src: "https://skillicons.dev/icons?i=github", alt: "GitHub", label: "GitHub" },
@@ -175,7 +152,7 @@ export default function About() {
               {techStack.concat(techStack).map((tech, index) => (
                 <div
                   key={`${tech.label}-${index}`}
-                  className="flex flex-col items-center gap-2 rounded-xl border border-slate-800 bg-slate-950/40 px-5 py-4 min-w-[110px]"
+                  className="flex flex-col items-center gap-2 rounded-xl border border-slate-800 bg-slate-950/40 px-5 py-4 min-w-27.5"
                 >
                   <Image
                     src={tech.src}
