@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useLayoutEffect } from "react";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { Download, Code2, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 
@@ -45,12 +45,12 @@ export default function Navbar() {
         {/* Logo / Name */}
         <a
           href="#home"
-          className="group inline-flex items-center overflow-hidden rounded-lg bg-emerald-500 text-white shadow-sm transition-all duration-500 ease-out hover:bg-emerald-400 hover:shadow-md"
+          className="group inline-flex items-center overflow-hidden rounded-lg border border-emerald-500 text-emerald-400 transition-all duration-500 ease-out hover:text-emerald-300 hover:border-emerald-300"
         >
-          <span className="flex h-9 w-9 items-center justify-center text-sm font-semibold transition-transform duration-300 group-hover:scale-105">
+          <span className="flex h-9 w-9 items-center justify-center transition-transform duration-300 group-hover:scale-105">
             <Code2 size={18} />
           </span>
-          <span className="max-w-0 overflow-hidden whitespace-nowrap px-0 text-sm font-semibold opacity-0 transition-all duration-500 ease-out group-hover:max-w-[140px] group-hover:px-2 group-hover:opacity-100">
+          <span className="max-w-0 overflow-hidden whitespace-nowrap px-0 text-sm font-semibold opacity-0 transition-all duration-500 ease-out group-hover:max-w-35 group-hover:px-2 group-hover:opacity-100">
             Lester Osana
           </span>
         </a>
@@ -80,14 +80,23 @@ export default function Navbar() {
           {/* Theme toggle */}
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="ml-2 flex items-center justify-center w-9 h-9 rounded-lg border border-slate-600 text-slate-400 hover:text-white hover:border-slate-400 transition"
+            className="ml-2 flex items-center justify-center w-9 h-9 rounded-lg border border-slate-600 text-slate-400 hover:text-yellow-400 hover:border-yellow-400/50 transition-colors duration-300"
             aria-label="Toggle theme"
           >
-            {mounted ? (
-              theme === "dark" ? <Sun size={16} /> : <Moon size={16} />
-            ) : (
-              <span className="w-4 h-4" />
-            )}
+            <AnimatePresence mode="wait" initial={false}>
+              {mounted && (
+                <motion.span
+                  key={theme}
+                  initial={{ rotate: -90, scale: 0, opacity: 0 }}
+                  animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                  exit={{ rotate: 90, scale: 0, opacity: 0 }}
+                  transition={{ duration: 0.2, ease: "easeInOut" }}
+                  className="flex items-center justify-center"
+                >
+                  {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+                </motion.span>
+              )}
+            </AnimatePresence>
           </button>
         </div>
       </nav>
