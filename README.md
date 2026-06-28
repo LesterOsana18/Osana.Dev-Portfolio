@@ -1,30 +1,52 @@
 # Osana.Dev-Portfolio
 
-A modern personal portfolio website built with TypeScript and designed to showcase my work, skills, experience, and projects.
+A modern, responsive personal portfolio website built with TypeScript, showcasing my work, experience, projects, and contact information.
 
-## About
+## Live Site
 
-This repository contains the source code for my developer portfolio. The site includes:
+- https://osana-dev-portfolio.vercel.app
 
-- A responsive hero section with profile image and social links
-- An About section with highlights, quick facts, and a scrolling tech stack marquee
-- A Contact section with social links and a contact form
-- Smooth motion effects and interactive hover states throughout the UI
+## Overview
+
+This repository contains the source code for my developer portfolio. The final version includes:
+
+- A fixed, responsive navbar with desktop navigation and a mobile hamburger menu
+- A theme toggle powered by `next-themes`
+- A polished logo/name treatment with hover reveal interaction
+- Smooth scrolling to section anchors
+- Section-based portfolio content for About, Experience, Projects, and Contact
+- A downloadable resume link
+- Motion-powered UI transitions and interactive hover states
 
 ## Tech Stack
 
 - TypeScript
-- CSS
-- JavaScript
 - Next.js
 - React
-- Framer Motion
 - Tailwind CSS
+- Framer Motion
+- lucide-react
+- next-themes
+
+## Features
+
+- Responsive layout for desktop and mobile screens
+- Animated navigation and dropdown interactions
+- Dark/light theme switching
+- Smooth anchor navigation
+- Clean, modern portfolio presentation
 
 ## Getting Started
 
-Clone the repository and run the project locally following the app's setup instructions.
+Clone the repository and install dependencies:
+
+```bash
+npm install
+npm run dev
+```
+
+Then open the local development server in your browser.
 
 ## Notes
 
-The README should stay in sync with UI updates such as animation changes, section refinements, and content improvements across the portfolio.
+This README should stay aligned with the final portfolio UI and behavior as the site evolves.
