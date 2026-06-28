@@ -1,4 +1,4 @@
-# Osana.Dev-Portfolio
+# Lester Osana | Full-Stack Developer
 
 A modern, responsive personal portfolio website built with TypeScript, showcasing my work, experience, projects, and contact information.
 
@@ -46,7 +46,3 @@ npm run dev
 ```
 
 Then open the local development server in your browser.
-
-## Notes
-
-This README should stay aligned with the final portfolio UI and behavior as the site evolves.
