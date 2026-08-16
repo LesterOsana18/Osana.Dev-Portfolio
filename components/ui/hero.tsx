@@ -101,7 +101,7 @@ export default function Hero() {
 
             <motion.h1
               variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
-              className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-4 bg-gradient-to-r from-slate-900 via-slate-900 to-emerald-600 dark:from-white dark:via-white dark:to-emerald-400 bg-clip-text text-transparent"
+              className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-4 bg-linear-to-r from-slate-900 via-slate-900 to-emerald-600 dark:from-white dark:via-white dark:to-emerald-400 bg-clip-text text-transparent"
             >
               Lester Osana
             </motion.h1>
