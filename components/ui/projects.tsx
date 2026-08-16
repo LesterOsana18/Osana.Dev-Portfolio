@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { SiGithub } from "react-icons/si";
 import { ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 const projects = [
   {
@@ -12,6 +13,7 @@ const projects = [
     tags: ["Java-based Simulator", "Optimization Algorithm", "Research"],
     github: "https://github.com/CS-4-3-Group-4",
     live: null, // set to null if no live demo
+    image: "/images/projects/efa.png", // placeholder — replace with your screenshot
   },
   {
     title: "Isko360",
@@ -20,6 +22,7 @@ const projects = [
     tags: ["TypeScript", "PHP", "Laravel"],
     github: "https://github.com/LesterOsana18/Isko360",
     live: null, // set to null if no live demo
+    image: "/images/projects/isko360.png", // placeholder — replace with your screenshot
   },
   {
     title: "PUP Commeownity",
@@ -28,6 +31,7 @@ const projects = [
     tags: ["Blade", "Laravel", "Tailwind CSS"],
     github: "https://github.com/WebDev-Group-4-25/PUPCommeownity",
     live: null, // set to null if no live demo
+    image: "/images/projects/commeownity.png", // placeholder — replace with your screenshot
   },
   {
     title: "RentEase Application",
@@ -36,15 +40,13 @@ const projects = [
     tags: ["Java", "JavaFX", "MySQL"],
     github: "https://github.com/LesterOsana18/RentEase-Application",
     live: null,
+    image: "/images/projects/rentease.png", // placeholder — replace with your screenshot
   },
 ];
 
 export default function Projects() {
   return (
-    <section
-      id="projects"
-      className="min-h-screen flex items-center px-6 py-24"
-    >
+    <section id="projects" className="min-h-screen flex items-center px-6 py-24">
       <div className="max-w-5xl mx-auto w-full">
         {/* Header */}
         <motion.div
@@ -54,15 +56,16 @@ export default function Projects() {
           transition={{ duration: 0.5 }}
           className="mb-8"
         >
-          <p className="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-3">
-            Projects
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Featured Projects
-          </h2>
-          <p className="text-slate-400 text-lg max-w-2xl leading-relaxed">
-            A selection of projects I've worked on — from academic research to
-            full-stack web applications.
+          <div className="flex items-center gap-3 mb-3">
+            <span className="h-px w-8 bg-emerald-400" />
+            <p className="text-xs font-semibold uppercase tracking-widest text-emerald-400">
+              Projects
+            </p>
+            <span className="h-px w-8 bg-emerald-400" />
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
+          <p className="text-slate-400 text-lg max-w-5xl leading-relaxed">
+            A selection of projects I&apos;ve worked on — from academic research to full-stack web applications.
           </p>
         </motion.div>
 
@@ -75,23 +78,31 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group rounded-2xl border border-slate-800 bg-slate-900 p-6 flex flex-col hover:border-emerald-500/40 transition-colors duration-300"
+              className="group rounded-2xl border border-slate-800 bg-slate-900 overflow-hidden flex flex-col hover:border-emerald-500/40 transition-colors duration-300"
             >
-              {/* Top — title + links */}
-              <div className="flex items-start justify-between gap-4 mb-3">
-                <h3 className="text-base font-semibold text-white">
-                  {project.title}
-                </h3>
-                <div className="flex items-center gap-3 shrink-0">
+              {/* Image banner */}
+              <div className="relative w-full aspect-video overflow-hidden bg-slate-950">
+                <Image
+                  src={project.image}
+                  alt={`${project.title} preview`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                {/* gradient fade into card body */}
+                <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/10 to-transparent" />
+
+                {/* floating link pill */}
+                <div className="absolute top-3 right-3 flex items-center gap-2 rounded-full bg-slate-950/60 backdrop-blur-sm px-2.5 py-1.5">
                   {project.github && (
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="GitHub"
-                      className="text-slate-400 hover:text-white transition"
+                      className="text-slate-300 hover:text-white transition"
                     >
-                      <SiGithub size={17} />
+                      <SiGithub size={16} />
                     </a>
                   )}
                   {project.live && (
@@ -100,29 +111,30 @@ export default function Projects() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Live demo"
-                      className="text-slate-400 hover:text-emerald-400 transition"
+                      className="text-slate-300 hover:text-emerald-400 transition"
                     >
-                      <ExternalLink size={17} />
+                      <ExternalLink size={16} />
                     </a>
                   )}
                 </div>
               </div>
 
-              {/* Description */}
-              <p className="text-sm text-slate-400 leading-relaxed flex-1 mb-5">
-                {project.description}
-              </p>
+              {/* Body */}
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="text-base font-semibold text-white mb-3">{project.title}</h3>
 
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-xs bg-emerald-500/10 text-emerald-400 rounded-md px-2 py-0.5"
-                  >
-                    {tag}
-                  </span>
-                ))}
+                <p className="text-sm text-slate-400 leading-relaxed flex-1 mb-5">{project.description}</p>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-xs bg-emerald-500/10 text-emerald-400 rounded-md px-2 py-0.5"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </motion.div>
           ))}
