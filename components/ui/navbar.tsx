@@ -257,7 +257,7 @@ export default function Navbar() {
               ))}
 
               <motion.a
-                href="/resume.pdf"
+                href="/LesterOsanaResume.pdf"
                 download
                 onClick={() => setMenuOpen(false)}
                 variants={{
