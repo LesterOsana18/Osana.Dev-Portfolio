@@ -140,8 +140,9 @@ export default function Navbar() {
           ))}
 
           <motion.a
-            href="/resume.pdf"
-            download
+            href="/LesterOsanaResume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ y: -2 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
             className="ml-2 inline-flex items-center gap-1.5 rounded-lg border border-emerald-500 px-4 py-1.5 text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500 hover:text-white transition-colors duration-300"
@@ -258,7 +259,8 @@ export default function Navbar() {
 
               <motion.a
                 href="/LesterOsanaResume.pdf"
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMenuOpen(false)}
                 variants={{
                   hidden: { opacity: 0, x: -12 },
