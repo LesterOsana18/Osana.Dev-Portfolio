@@ -138,7 +138,7 @@ export default function Hero() {
               </motion.a>
 
               <motion.a
-                href="/resume.pdf"
+                href="/LesterOsanaResume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -4, scale: 1.03 }}
